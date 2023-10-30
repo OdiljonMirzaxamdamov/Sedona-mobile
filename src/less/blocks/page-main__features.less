@@ -1,0 +1,45 @@
+.features {
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feature__item {
+    box-sizing: border-box;
+    border-bottom: 1px solid @border-color-item;
+    margin: 0 20px;
+
+    background-color: @bg-color-page;
+    color: @black;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @media @tablet {
+      width: 33.3333333%;
+      border-bottom: none;
+      margin: 0;
+    }
+  }
+
+  .feature__title {
+    color: @black;
+  }
+
+  .feature__description {
+
+    @media @tablet {
+      max-width: 158px;
+      margin-bottom: 18px;
+    }
+
+    @media @desktop {
+      max-width: 280px;
+      margin-bottom: 38px;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"), local("PTSans-Regular"), url("../src/fonts/ptsans.woff2") format("woff2"), url("../src/fonts/ptsans.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../src/fonts/ptsansbold.woff2") format("woff2"), url("../src/fonts/ptsansbold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.page-header__welcome-image-wrapper {
+  position: relative;
+  height: 390px;
+  background-color: #ddebf4;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .page-header__welcome-image-wrapper {
+    height: 520px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__welcome-image-wrapper {
+    height: 520px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: cover;
+  }
+}
+.page-header__welcome-image-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 26px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 26px;
+}
+@media (min-width: 768px) {
+  .page-header__welcome-image-wrapper::after {
+    height: 57px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+    background-size: 100% 57px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__welcome-image-wrapper::after {
+    height: 57px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
+}
+.page-header__welcome-image {
+  display: block;
+  padding-top: 90px;
+  margin: 0 auto;
+  width: 282px;
+  height: 216px;
+}
+@media (min-width: 768px) {
+  .page-header__welcome-image {
+    padding-top: 78px;
+    width: 460px;
+    height: 350px;
+  }
+}
+.button {
+  display: block;
+  box-sizing: border-box;
+  padding: 13px 10px;
+  border: 3px solid;
+  font: inherit;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}

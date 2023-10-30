@@ -1,0 +1,159 @@
+.gallery__wrapper {
+  text-align: left;
+  background-color: @white;
+}
+
+.gallery__list {
+  width: 280px;
+  .list-reset(0);
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 648px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media @desktop {
+    width: 100%;
+  }
+}
+
+.gallery__item {
+  position: relative;
+  padding: 22px 6.25% 21px;
+  border-bottom: 1px solid @border-color-photo;
+
+  @media @tablet {
+    padding: 0;
+    width: 50%;
+    border-bottom: none;
+    background-color: @bg-color-body;
+  }
+
+  @media @desktop {
+    width: 33.333333%;
+  }
+
+  //&:nth-of-type(odd):not(:first-of-type) Это первый вариант
+  &:nth-of-type(2n + 1):not(:first-of-type){
+    @media @tablet {
+      background-color: @bg-color-photo;
+    }
+  }
+
+  &--full {
+    border-top: 1px solid @border-color-photo;
+
+    @media @tablet {
+      flex-shrink: 0;
+      width: 100%;
+      border-top: none;
+    }
+
+    @media @desktop {
+      width: 100%;
+    }
+  }
+}
+
+.photo__link {
+  display: block;
+}
+
+.gallery__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery__info {
+  padding-top: 15px;
+  line-height: 24px;
+
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+
+  @media @desktop {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: ~"calc(100% - 40px)";
+    color: @font-color-secondary;
+    background-color: fade(@black, 30%);
+  }
+}
+
+.gallery__description {
+  @media @tablet {
+    max-width: 75%;
+  }
+}
+
+.gallery__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: @font-color-heading;
+
+  @media @desktop {
+    color: @font-color-secondary;
+  }
+}
+
+.gallery__author {
+  margin: 0;
+  text-transform: none;
+}
+
+.gallery__like {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+
+  @media @tablet {
+    padding-top: 0;
+  }
+
+  &--button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &--icon {
+    width: 22px;
+    height: 20px;
+    fill: #b2b2b2;
+    background-color: transparent;
+
+    @media @desktop {
+      fill: @white;
+    }
+  }
+}
+
+
+
+
+
+
+.gallery__like-value {
+  margin: auto 0 auto 13px;
+  font-weight: 700;
+  color: @font-color-heading;
+  line-height: 14px;
+
+
+  @media @tablet {
+    align-self: auto;
+    margin-left: 9px;
+  }
+
+  @media @desktop {
+    color: @font-color-secondary;
+  }
+}

@@ -1,0 +1,164 @@
+.video {
+  position: relative;
+
+  @media @tablet {
+    width: 648px;
+    margin: 0 auto;
+    //padding-left: 60px;
+    //padding-right: 60px;
+  }
+
+  @media @desktop {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 800px;
+  }
+}
+
+.video__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+
+  @media @tablet {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @media @desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+
+//Контролёр для видео
+.video-controls {
+  height: 45px;
+  background-color: fade(@black, 60%);
+
+  @media @tablet {
+    height: 93px;
+  }
+}
+
+.video-controls__scale {
+  position: relative;
+  z-index: 20;
+  margin: 21px;
+  height: 3px;
+  background-color: fade(@white, 20%);
+
+  @media @tablet {
+    margin: 45px 165px 45px 93px;
+  }
+}
+
+.video-controls__handle {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  width: 9px;
+  height: 9px;
+  border: none;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+
+  @media @tablet {
+    left: 29%;
+  }
+}
+
+.video-controls__buttons {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+  padding-right: 13px;
+  height: 66px;
+  background-color: @bg-color-body;
+
+  @media @tablet {
+    bottom: 50%;
+    transform: translateY(50%);
+    padding-left: 22px;
+    padding-right: 31px;
+    background-color: transparent;
+  }
+}
+
+.video-controls__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--subtitles {
+    margin-left: auto;
+    margin-right: 17px;
+  }
+}
+
+.video-controls__icon {
+  display: block;
+  height: 20px;
+  fill: @bg-color-video-icon;
+
+  @media @tablet {
+    fill: @white;
+  }
+
+  &--replay {
+    width: 16px;
+  }
+
+  &--subtitles {
+    width: 32px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+  }
+}
+
+.video-controls__button:hover .video-controls__icon {
+  fill: @font-color-base;
+
+  @media @tablet {
+    fill: @white;
+    fill-opacity: 0.7;
+  }
+}
+
+.video-controls__button:active .video-controls__icon {
+  fill: @font-color-base;
+  fill-opacity: 0.3;
+
+  @media @tablet {
+    fill: @white;
+    fill-opacity: 0.5;
+  }
+}
+

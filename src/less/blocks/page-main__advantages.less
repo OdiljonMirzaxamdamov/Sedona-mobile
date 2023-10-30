@@ -1,0 +1,110 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px 36px 20px;
+  background-color: #ffffff;
+
+  @media @tablet {
+    flex-direction: row;
+    padding: 0;
+    width: auto;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  min-width: 280px;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    width: 33.333333%;
+    margin: 60px 0 64px;
+  }
+
+  &--house {
+    @media @tablet {
+      order: 0;
+    }
+  }
+
+  &--gift {
+    @media @tablet {
+      order: 2;
+    }
+  }
+
+  &--burger {
+    @media @tablet {
+      order: 1;
+    }
+  }
+}
+
+.advantages__block {
+  @media @tablet {
+    max-width: 165px;
+    align-self: center;
+  }
+
+  @media @desktop {
+    max-width: 300px;
+  }
+}
+
+.advantages__br-gift {
+  display: none;
+
+  @media @desktop {
+    display: block;
+  }
+}
+
+
+.advantages__image {
+  display: block;
+  width: 40px;
+  height: 40px;
+  align-self: start;
+  padding-right: 12px;
+  flex-shrink: 0;
+
+  @media @tablet {
+    align-self: center;
+    width: 75px;
+    height: 72px;
+    padding-right: 0;
+  }
+}
+
+
+.advantages__title {
+  display: block;
+  text-align: left;
+  margin-top: 9px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: @font-color-heading;
+
+  @media @tablet {
+    display: block;
+
+    text-align: center;
+    font-size: 21px;
+    margin: 25px 0 25px 0;
+  }
+}
+
+
+.advantages__description {
+  display: block;
+  text-align: left;
+  margin: 14px 0 18px 0;
+
+  @media @tablet {
+    text-align: center;
+    margin: 0;
+  }
+}

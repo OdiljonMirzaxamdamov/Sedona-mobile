@@ -1,0 +1,117 @@
+.page-footer {
+  padding-top: 16px;
+  padding-bottom: 5px;
+  background-color: @white;
+
+  @media @tablet {
+    display: flex;
+    padding-bottom: 18px;
+  }
+
+  @media @desktop {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
+
+.page-footer__visit,
+.page-footer__social,
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  line-height: 26px;
+
+  @media @tablet {
+    width: 33.333333%;
+  }
+}
+
+
+//Хэштег футера
+.visit__hashtag {
+  width: 138px;
+  font-size: 21px;
+  font-weight: 700;
+  color: @font-color-heading;
+
+  @media @desktop {
+    width: 160px;
+  }
+}
+
+
+
+//Социальные сети
+.social__list {
+  display: flex;
+  justify-content: center;
+
+  .list-reset();
+}
+
+.social__item {
+  margin: 0 3px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 44px;
+  border: 2px solid @bg-color-button;
+  background-color: @bg-color-button;
+
+  &:hover {
+    border-color: @bg-color-button--hover;
+    background-color: @bg-color-button--hover;
+  }
+
+  &:active {
+    border-color: @bg-color-button--active;
+    background-color: @bg-color-button--active;
+  }
+
+  &:focus {
+    border-color: @bg-color-button--hover;
+    outline: 0;
+  }
+}
+
+.social__icon {
+  fill: @white;
+}
+
+.social__link:active .social__icon {
+  fill-opacity: 0.3;
+}
+
+
+//Информация о разработчике
+.copyright__text {
+  margin-right: 13px;
+
+  @media @tablet {
+    margin-left: 8px;
+  }
+
+  @media @desktop {
+    margin-left: 32px;
+  }
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__link:hover .copyright__link-icon {
+  fill: @bg-color-button;
+}
+
+.copyright__link:active .copyright__link-icon {
+  fill-opacity: 0.3;
+}

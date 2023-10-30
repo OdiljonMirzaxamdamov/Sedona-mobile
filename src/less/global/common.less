@@ -1,0 +1,75 @@
+body {
+  background-color: @bg-color-body;
+}
+
+
+.page {
+  margin: 0 auto;
+  padding: 0;
+  min-width: @mobile-width;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @font-color-base;
+  text-transform: uppercase;
+  background-color: @bg-color-page;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 1200px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px 2px grey;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  padding: 13px 10px;
+  border: 3px solid;
+  font: inherit;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+//
+//.mobile-hidden {
+//  display: none;
+//
+//  @media @desktop {
+//    display: inline;
+//  }
+//}
