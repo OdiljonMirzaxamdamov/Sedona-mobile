@@ -57,15 +57,16 @@
     <main class="page-main">
         <h1 class="visually-hidden">Седона, форма отзыва</h1>
 
-        <section class="title">
+        <section class="title title--form">
             <h2 class="visually-hidden">Форма отзыва</h2>
             <b class="title__slogan">Оставьте свой отзый</b>
-            <p class="title__intro">Помогите нашим отелям стать лучше!
+            <p class="title__intro title__intro--form">Помогите нашим отелям стать лучше!
                 Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
         </section>
 
 
         <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
+
             <fieldset class="form-feedback__fieldset form-feedback__fieldset--name">
                 <legend class="form-feedback__legend form-feedback__legend--name">Представьтесь:</legend>
 
@@ -146,7 +147,7 @@
                     </li>
                     <li class="form-feedback__input-block form-feedback__input-block--achievements">
                         <input class="form-feedback__checkbox visually-hidden"
-                               type="checkbox" name="bell" id="bell">
+                               type="checkbox" name="bell" id="bell" checked="">
                         <label class="form-feedback__label-checkbox" for="bell">Гора-Колокол</label>
                     </li>
                     <li class="form-feedback__input-block form-feedback__input-block--achievements">
@@ -156,7 +157,7 @@
                     </li>
                     <li class="form-feedback__input-block form-feedback__input-block--achievements">
                         <input class="form-feedback__checkbox visually-hidden"
-                               type="checkbox" name="rocks" id="rocks" checked="">
+                               type="checkbox" name="rocks" id="rocks">
                         <label class="form-feedback__label-checkbox" for="rocks">Красные скалы</label>
                     </li>
                 </ul>
@@ -176,8 +177,8 @@
 
                 <p class="form-feedback__notification">* — обязательные поля</p>
             </div>
-        </form>
 
+        </form>
 
     </main>
 
@@ -250,7 +251,6 @@
             <button class="button modal-form__button modal-form__button--success">Закрыть окно</button>
         </div>
     </div>
-
 
     <div class="modal-form modal-form--failure">
         <div class="modal-form__top modal-form__top--failure">
