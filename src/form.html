@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Седона-mobile-form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="less/style.css">
     <link rel="stylesheet" href="less/normalize.css">
@@ -12,38 +13,36 @@
 <div class="page">
 
     <header class="page-header">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+                <a class="main-nav__logo logo">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                        <img class="logo__image" src="img/logo-sedona-mobile.svg"
+                             width="102" height="84" alt="Логотип Седоны">
+                    </picture>
+                </a>
 
-            <a class="main-nav__logo logo">
-                <picture>
-                    <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-                    <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-                    <img class="logo__image" src="img/logo-sedona-mobile.svg"
-                         width="102" height="84" alt="Логотип Седоны">
-                </picture>
-            </a>
-
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                    <a class="site-list__link" href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item">
-                    <a class="site-list__link" href="photo.html">Фото и видео</a>
-                </li>
-                <li class="site-list__item site-list__item--active">
-                    <a class="site-list__link">Форма отзыва</a>
-                </li>
-                <li class="site-list__item">
-                    <a class="site-list__link" href="#">HTML Academy</a>
-                </li>
-            </ul>
-
-            <div class="main-nav__toggle">
-                <span class="visually-hidden">Меню</span>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="photo.html">Фото и видео</a>
+                    </li>
+                    <li class="site-list__item site-list__item--active">
+                        <a class="site-list__link">Форма отзыва</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">HTML Academy</a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="main-nav__toggle--off"></div>
-
+            <div class="main-nav__toggle main-nav__toggle--off">
+                <span class="visually-hidden">Меню</span>
+            </div>
         </nav>
 
         <div class="page-header__welcome-image-wrapper page-header__welcome-image-wrapper--inner-page">
@@ -51,7 +50,6 @@
                  src="img/text-sedona.svg" width="460" height="80"
                  alt="Текст добро пожаловать в Седону">
         </div>
-
     </header>
 
     <main class="page-main">
@@ -266,6 +264,7 @@
         </div>
     </div>
 
+    <script src="js/main-nav-js.js"></script>
 </div>
 </body>
 </html>

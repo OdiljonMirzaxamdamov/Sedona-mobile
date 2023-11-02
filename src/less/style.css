@@ -81,7 +81,7 @@ a {
 .main-nav__logo {
   position: absolute;
   z-index: 1;
-  bottom: -33px;
+  bottom: -28px;
   transform: translateX(-50%);
 }
 @media (min-width: 768px) {
@@ -190,12 +190,18 @@ a {
     box-shadow: none;
   }
 }
-.main-nav__toggle {
+.main-nav--closed .main-nav__toggle {
   position: absolute;
   bottom: 0px;
   right: 7px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
-.main-nav__toggle::before {
+.main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
   bottom: 33px;
@@ -207,11 +213,11 @@ a {
   box-shadow: 0 9px 0 0 #81b3d2, 0 18px 0 0 #81b3d2;
 }
 @media (min-width: 768px) {
-  .main-nav__toggle {
+  .main-nav--closed .main-nav__toggle {
     display: none;
   }
 }
-.main-nav__toggle--off {
+.main-nav--opened .main-nav__toggle--off {
   position: absolute;
   top: 3px;
   right: 7px;
@@ -220,9 +226,10 @@ a {
   padding: 0;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
-.main-nav__toggle--off::before,
-.main-nav__toggle--off::after {
+.main-nav--opened .main-nav__toggle--off::before,
+.main-nav--opened .main-nav__toggle--off::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -231,16 +238,33 @@ a {
   height: 4px;
   background-color: #ffffff;
 }
-.main-nav__toggle--off::before {
+.main-nav--opened .main-nav__toggle--off::before {
   transform: translateY(-50%) rotate(45deg);
 }
-.main-nav__toggle--off::after {
+.main-nav--opened .main-nav__toggle--off::after {
   transform: translateY(-50%) rotate(-45deg);
 }
 @media (min-width: 768px) {
-  .main-nav__toggle--off {
+  .main-nav--opened .main-nav__toggle--off {
     display: none;
   }
+}
+.main-nav--no-js .main-nav__toggle {
+  display: none;
+}
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main-nav--closed .main-nav__wrapper {
+    display: block;
+  }
+}
+.main-nav--nojs .main-nav__wrapper {
+  display: block;
+}
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
 .page-header__welcome-image-wrapper {
   position: relative;

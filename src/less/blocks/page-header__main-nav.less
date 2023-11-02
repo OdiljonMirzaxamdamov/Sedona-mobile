@@ -15,7 +15,7 @@
 .main-nav__logo {
   position: absolute;
   z-index: 1;
-  bottom: -33px;
+  bottom: -28px;
   transform: translateX(-50%);
 
   @media @tablet {
@@ -42,6 +42,7 @@
     height: 96px;
   }
 }
+
 
 
 
@@ -131,10 +132,16 @@
 
 
 //Стили для бургера и кнопки закрытия
-.main-nav__toggle {
+.main-nav--closed .main-nav__toggle {
   position: absolute;
   bottom: 0px;
   right: 7px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 
   //Бургер
   &::before {
@@ -155,7 +162,7 @@
 }
 
 //Крестик для закрытия меню
-.main-nav__toggle--off {
+.main-nav--opened .main-nav__toggle--off {
   position: absolute;
   top: 3px;
   right: 7px;
@@ -164,6 +171,8 @@
   padding: 0;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
+
 
   &::before,
   &::after {
@@ -188,6 +197,23 @@
   }
 }
 
-//.main-nav--no-js .main-nav__toggle {
-//  display: none;
-//}
+.main-nav--no-js .main-nav__toggle {
+  display: none;
+}
+
+
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+
+  @media @tablet {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  display: block;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
