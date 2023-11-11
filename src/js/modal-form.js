@@ -34,7 +34,11 @@ modalFormButtonFailure.addEventListener("click", function (evt){
 window.addEventListener("keydown", function (evt){
     if (evt.keyCode === 27) {
         evt.preventDefault();
-        modalFormSuccess.classList.add("modal-form--remove")
-        modalFormFailure.classList.add("modal-form--remove");
+        if (!modalFormSuccess.classList.contains("modal-form--remove")){
+            modalFormSuccess.classList.add("modal-form--remove")
+        }
+        if (!modalFormFailure.classList.contains("modal-form--remove")){
+            modalFormFailure.classList.add("modal-form--remove")
+        }
     }
 });

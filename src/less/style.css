@@ -596,7 +596,6 @@ a {
 }
 .advantages__item {
   display: flex;
-  min-width: 280px;
 }
 @media (min-width: 768px) {
   .advantages__item {
@@ -1653,6 +1652,7 @@ a {
   font-size: 18px;
   font-weight: 700;
   text-transform: none;
+  text-align: left;
 }
 @media (min-width: 768px) {
   .form-feedback__label-radio {
@@ -1735,7 +1735,7 @@ a {
   }
 }
 .form-feedback__input-text::placeholder {
-  color: inherit;
+  color: darkgrey;
 }
 .form-feedback__textarea {
   padding-top: 11px;
